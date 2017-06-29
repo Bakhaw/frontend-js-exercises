@@ -55,7 +55,7 @@ describe("findFirstMatch", function() {
     expect(challenge.findFirstMatch).to.exist;
   });
 
-  xit("should find a match", function() {
+  it("should find a match", function() {
     expect(challenge.findFirstMatch("Roses are red.", "red")).to.eql(10);
 
   });
