@@ -60,43 +60,43 @@ describe("findFirstMatch", function() {
 
   });
 
-  xit("should return the first match", function() {
+  it("should return the first match", function() {
     expect(challenge.findFirstMatch("red red red red", "red")).to.eql(0);
   });
 });
 
 describe("findLastMatch", function() {
-  xit("should be defined", function() {
+  it("should be defined", function() {
     expect(challenge.findLastMatch).to.exist;
   });
 
-  xit("should find a match", function() {
+  it("should find a match", function() {
     expect(challenge.findLastMatch("Roses are red.", "red")).to.eql(10);
   });
 
-  xit("should return the first match", function() {
+  it("should return the first match", function() {
     expect(challenge.findLastMatch("red red red red", "red")).to.eql(12);
   });
 });
 
 describe("substringBetweenMatches", function() {
-  xit("should be defined", function() {
+  it("should be defined", function() {
     expect(challenge.substringBetweenMatches).to.exist;
   });
 
-  xit("creates the correct substring for the example", function() {
+  it("creates the correct substring for the example", function() {
     text = "Roses are red, apples are really red.";
     result = challenge.substringBetweenMatches(text, "red");
     expect(result).to.eql(", apples are really ");
   });
 
-  xit("creates the correct substring when there are more than two matches", function() {
+  it("creates the correct substring when there are more than two matches", function() {
     text = "red red red red red red";
     result = challenge.substringBetweenMatches(text, "red");
     expect(result).to.eql(" red red red red ");
   });
 
-  xit("creates the correct substring for longer words", function() {
+  it("creates the correct substring for longer words", function() {
     text = "It's been a great day to play during the great summer";
     result = challenge.substringBetweenMatches(text, "great");
     expect(result).to.eql(" day to play during the ");

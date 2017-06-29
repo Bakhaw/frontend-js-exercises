@@ -7,13 +7,13 @@ module.exports.sliceItAndCombineIt = function(bigString, startA, endA, startB, e
 };
 
 module.exports.findFirstMatch = function(text, searchString) {
-
+  return text.indexOf(searchString)
 };
 
 module.exports.findLastMatch = function(text, searchString) {
-
+  return text.lastIndexOf(searchString)
 };
 
 module.exports.substringBetweenMatches = function(text, searchString) {
-
+  return text.substring(text.indexOf(searchString)+searchString.length, text.lastIndexOf(searchString))
 };
